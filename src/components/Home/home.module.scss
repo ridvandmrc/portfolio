@@ -1,0 +1,105 @@
+.home {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: calc(100dvh - 100px);
+  scroll-snap-align: end;
+
+  .homeBg {
+    width: 100dvw;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+
+    inset: 0;
+    top: 90px;
+    z-index: -1;
+  }
+
+  .portfolio {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    color: var(--white);
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      min-height: 300px;
+      background: rgba(#332e2e, 0.5);
+      transition: box-shadow 300ms;
+
+      &:hover {
+        box-shadow: 0 0 0 1px var(--border-color);
+      }
+      .desc {
+        opacity: 0.8;
+      }
+      .name {
+        font-size: 4rem;
+        margin: 0;
+        animation-name: name-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      .contactLink {
+        display: flex;
+        margin-top: 1rem;
+        border: 1px solid var(--border-color);
+        padding: 1rem;
+        border-radius: 8px;
+        transition: background-color 300ms;
+
+        &:hover {
+          background: rgba(#fff, 0.2);
+        }
+      }
+    }
+  }
+
+  .pointer {
+    background-color: var(--border-color);
+    width: 30px;
+    height: 2px;
+    margin-top: -20px;
+    position: relative;
+    animation-name: pointer-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes pointer-animation {
+  0% {
+    transform: translateX(400px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes name-animation {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
