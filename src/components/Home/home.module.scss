@@ -36,6 +36,7 @@
       min-height: 300px;
       background: rgba(#332e2e, 0.5);
       transition: box-shadow 300ms;
+      overflow: hidden;
 
       @include medium() {
         margin: 0.5rem;
@@ -70,10 +71,6 @@
     animation-name: pointer-animation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-
-    @include small() {
-      display: none;
-    }
   }
 }
 

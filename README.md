@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rıdvan Demirci Portfolio
 
-## Getting Started
+Welcome to my portfolio! This repository showcases my projects, blogs, and a glimpse into my life. Feel free to explore and learn more about my work and interests.
 
-First, run the development server:
+### Home Page
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Home page](./ReadMePicture/pic1.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Portfolio Page
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Portfolio page](./ReadMePicture/pic2.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Project Page
 
-## Learn More
+![Project page](./ReadMePicture/pic3.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Blog Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Blog page](./ReadMePicture/pic4.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Mobile View
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![mobile view page](./ReadMePicture/mobile1.png)
