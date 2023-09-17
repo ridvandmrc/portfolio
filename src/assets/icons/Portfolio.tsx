@@ -7,8 +7,9 @@ export const PortfolioImage: FC<{ width?: number; height?: number }> = ({
 }) => (
   <Image
     src="/portfolio.svg"
-    alt="ridvan demirci portfolio"
+    alt="Rıdvan Demirci portfolio"
     width={width || "50"}
     height={height || "50"}
+    style={{ width: "3rem", height: "3rem" }}
   />
 );

@@ -1,3 +1,5 @@
+@import "../../app/breakpoints";
+
 .header {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
@@ -11,8 +13,8 @@
   top: 0;
   z-index: 6;
 
-  @media (max-width: 950px) {
-    grid-template-columns: 2fr 3fr;
+  @include medium() {
+    grid-template-columns: 1fr 5fr;
   }
 
   .portfolioName {
@@ -20,12 +22,19 @@
     align-items: center;
     gap: 1rem;
     margin: 0 1rem;
+    cursor: pointer;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
 
     p {
       font-size: 1.5rem;
       flex-shrink: 0;
+      margin-left: 1rem;
 
-      @media (max-width: 650px) {
+      @include medium() {
         display: none;
       }
     }
@@ -43,19 +52,22 @@
       li {
         list-style: none;
         margin: 0.5rem;
-        padding: 0.5rem;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 300ms;
-        box-sizing: border-box;
-        font-size: 1rem;
+        a {
+          padding: 0.5rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 300ms;
+          box-sizing: border-box;
+          font-size: 1rem;
+          text-transform: capitalize;
 
-        &.active {
-          box-shadow: 0 0 0 1px var(--border-color);
-        }
+          &.active {
+            box-shadow: 0 0 0 1px var(--border-color);
+          }
 
-        &:hover {
-          background-color: rgba($color: #fff, $alpha: 0.2);
+          &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.2);
+          }
         }
       }
     }
@@ -65,7 +77,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: 950px) {
+    @include medium() {
       display: none;
     }
 

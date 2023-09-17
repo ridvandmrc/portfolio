@@ -1,80 +1,58 @@
+@import "../../app/mixins";
+@import "../../app/breakpoints";
+
 .portfolio {
-  display: flex;
-  width: 100%;
-  height: calc(100dvh - 100px);
-  color: var(--white);
-  scroll-snap-align: end;
+  @include pageWrapper();
 
   .content {
-    background: rgba(#332e2e, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 1rem auto;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1rem;
-    overflow: auto;
-    max-height: 650px;
-    margin: auto;
+    @include pageContent();
 
-    .portre {
-      max-width: 300px;
-      max-height: 300px;
-      min-width: 150px;
-      min-height: 150px;
-      width: 20vw;
-      height: 20vw;
-      border-radius: 50%;
-      margin-top: 2rem;
+    @include medium() {
+      margin: 0.5rem;
     }
 
-    .careerInfo {
-      display: flex;
-      flex-direction: column;
-      width: calc(100% - 300px);
-      padding: 1.2rem;
+    @include small() {
+      max-height: calc(100dvh - 200px);
+    }
 
-      p {
-        font-size: 1.2rem;
-        line-height: 1.8;
+    .infoWrapper {
+      display: flex;
+      .portre {
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 150px;
+        min-height: 150px;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        margin-top: 2rem;
+        opacity: 0.8;
+      }
+
+      .careerInfo {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 300px);
+        padding: 1.2rem;
+
+        p {
+          font-size: 1.2rem;
+          line-height: 1.8;
+        }
+      }
+
+      @include small() {
+        flex-direction: column;
+        align-items: center;
+
+        .careerInfo {
+          width: 100%;
+        }
       }
     }
-
     .buttonWrapper {
       display: flex;
       gap: 1rem;
-
-      .contactLink {
-        display: flex;
-        margin-top: 1rem;
-        border: 1px solid var(--border-color);
-        padding: 1rem;
-        border-radius: 8px;
-        transition: background-color 300ms;
-
-        &:hover {
-          background: rgba(#fff, 0.2);
-        }
-      }
-
-      .downloadResume {
-        display: flex;
-        margin-top: 1rem;
-        background: var(--border-color);
-        padding: 1rem;
-        border-radius: 8px;
-        transition: background-color 300ms;
-        box-sizing: border-box;
-        border: 1px solid transparent;
-
-        &:hover {
-          background: rgba(#fff, 0.1);
-          border: 1px solid var(--white);
-        }
-      }
     }
   }
 }

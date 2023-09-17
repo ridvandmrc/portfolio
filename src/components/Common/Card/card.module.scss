@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: rgba(#000000, 0.5);
+  cursor: pointer;
+  color: var(--white);
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+
+  .projectTitle {
+    color: var(--border-color);
+  }
+
+  .arrow {
+    color: var(--border-color);
+    font-size: 1.4rem;
+    opacity: 0;
+    margin-left: auto;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transition: opacity 600ms;
+  }
+
+  .indicator {
+    position: absolute;
+    background: rgba(#000000, 0.6);
+    border-radius: 12px;
+    inset: 0;
+    z-index: -1;
+    width: 0;
+    transition: width 300ms;
+  }
+
+  &:hover {
+    .arrow {
+      opacity: 1;
+    }
+
+    .indicator {
+      width: 100%;
+    }
+  }
+}

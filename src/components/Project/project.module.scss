@@ -1,0 +1,39 @@
+@import "../../app/mixins";
+@import "../../app/breakpoints";
+
+.project {
+  @include pageWrapper();
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @include medium() {
+      margin: 0.5rem;
+    }
+
+    @include small() {
+      max-height: calc(100dvh - 150px);
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      grid-column: 1 / span 2;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include small() {
+        grid-column: 1;
+      }
+
+      .projectImage {
+        color: var(--border-color);
+        font-size: 2rem;
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}

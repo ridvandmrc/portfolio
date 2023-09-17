@@ -2,17 +2,24 @@ import { FC } from "react";
 import Image from "next/image";
 
 import PortfolioModule from "./portfolio.module.scss";
+import { Social } from "@/utils";
 
 export const Portfolio: FC = () => {
   return (
-    <section className={PortfolioModule.portfolio}>
+    <section
+      aria-label="Rıdvan Demirci - Portfolio"
+      className={PortfolioModule.portfolio}
+      id="portfolio"
+    >
       <div className={PortfolioModule.content}>
-        <h2>My Portfolio</h2>
-        <div style={{ display: "flex" }}>
+        <h2 content="Rıdvan Demirci Portfolio">
+          <i>Rıdvan Demirci</i> My Portfolio
+        </h2>
+        <div className={PortfolioModule.infoWrapper}>
           <Image
             className={PortfolioModule.portre}
             src="/portre.jpeg"
-            alt="home background"
+            alt="Rıdvan Demirci "
             width="100"
             height="100"
           />
@@ -40,10 +47,18 @@ export const Portfolio: FC = () => {
           </div>
         </div>
         <div className={PortfolioModule.buttonWrapper}>
-          <a href="#" className={PortfolioModule.downloadResume}>
+          <a
+            href="https://drive.google.com/file/d/1WkS-RZej3S8aKJpi9WIPXLJJx1yjT5nf/view?usp=sharing"
+            className={`primary-button`}
+            target="_blank"
+          >
             Download Resume
           </a>
-          <a href="#" className={PortfolioModule.contactLink}>
+          <a
+            href={Social.linkedin.link}
+            className={`secondary-button`}
+            target="_blank"
+          >
             Contact Me!
           </a>
         </div>
