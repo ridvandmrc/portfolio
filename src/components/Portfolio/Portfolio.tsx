@@ -22,6 +22,7 @@ export const Portfolio: FC = () => {
             alt="Rıdvan Demirci "
             width="100"
             height="100"
+            unoptimized
           />
           <div className={PortfolioModule.careerInfo}>
             <p aria-description="Ridvan demirci portfolio">

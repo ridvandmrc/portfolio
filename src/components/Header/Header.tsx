@@ -64,6 +64,7 @@ export const Header: FC = () => {
         alt="Rıdvan Demirci Header backgroun"
         width="100"
         height="100"
+        unoptimized
       />
     </>
   );
