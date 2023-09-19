@@ -41,7 +41,7 @@
         }
       }
 
-      @include small() {
+      @include medium() {
         flex-direction: column;
         align-items: center;
 
